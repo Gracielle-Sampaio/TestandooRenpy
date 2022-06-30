@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 1, in script
+    ﻿define lf = character('Larissa Fantina', color="#540b0e")
+  File "game/script.rpy", line 1, in script
+    ﻿define lf = character('Larissa Fantina', color="#540b0e")
+  File "game/script.rpy", line 1, in <module>
+    ﻿define lf = character('Larissa Fantina', color="#540b0e")
+NameError: name 'character' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\sampa\Downloads\renpy-7.4.11-sdk/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "C:\Users\sampa\Downloads\renpy-7.4.11-sdk/renpy/main.py", line 560, in main
+    renpy.game.context().run(node)
+  File "game/script.rpy", line 1, in script
+    ﻿define lf = character('Larissa Fantina', color="#540b0e")
+  File "game/script.rpy", line 1, in script
+    ﻿define lf = character('Larissa Fantina', color="#540b0e")
+  File "C:\Users\sampa\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2213, in execute
+    self.set()
+  File "C:\Users\sampa\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 2224, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\sampa\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 1, in <module>
+    ﻿define lf = character('Larissa Fantina', color="#540b0e")
+NameError: name 'character' is not defined
+
+Windows-10-10.0.19041
+Ren'Py 7.4.11.2266
+29junho22 1.0
+Thu Jun 30 15:21:43 2022

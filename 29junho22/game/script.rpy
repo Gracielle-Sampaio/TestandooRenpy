@@ -1,11 +1,11 @@
-﻿label start:
+﻿define lf = Character('Larissa Fantina', color="#540b0e")
+define sk = Character('Kary', color="#335c67")
 
-    "Sylvie" "Hi there! How was class?"
+label start:
 
-    "Me" "Good..."
+    lf "O que você tanto olha ai?"
 
-    "I can't bring myself to admit that it all went in one ear and out the other."
+    sk "Nada... "
+    sk "Só gosto de ver a movimentação da rua"
 
-    "Me" "Are you going home now? Wanna walk back with me?"
-
-    "Sylvie" "Sure!"
+    "Kary, olha para trás e dá um sorriso convidativo, para Larissa, que não se opõem ao convite"
