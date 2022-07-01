@@ -48,5 +48,5 @@ label leaving:
     "..."
 
     lf "tudo bem eu te acompanho"
-    show Larissa_front
+    show Larissa front
     with dissolve
