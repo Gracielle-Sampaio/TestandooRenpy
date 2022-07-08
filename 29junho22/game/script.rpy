@@ -5,8 +5,34 @@ image Larissa back = ("images/Larissa_back.png")
 image Kary front = ("images/Kary_front.png")
 image Kary back = ("images/Kary_back.png")
 
-
+   
 label start:
+    scene bg sacada
+
+    lf "Kary esta parada a um tempo ali"
+    "Devo incomoda-lá?"
+
+menu:
+
+    "A gente precisa sair, é bom chamar ela":
+        jump chamar
+
+    "Perguntar o que está fazendo":
+        jump perguntar
+
+label chamar:
+
+    lf "Kary??"
+
+    jump marry
+
+label perguntar:
+
+    lf "Kary??"
+
+    jump marry
+
+label marry:
 
     scene bg janela 
     play music "audio/carro.mp3" fadeout 1 loop
@@ -18,13 +44,12 @@ label start:
 
     lf "O que você tanto olha ai?"
 
-   
-
     scene bg sacada
     with None
     show Kary back
     with fade
     stop  music
+    
     k "Nada... "
     k "Só gosto de ver a movimentação da rua"
 
@@ -53,3 +78,35 @@ label leaving:
     lf "tudo bem eu te acompanho"
     show Larissa front
     with dissolve
+
+    "Antes de sair"
+    menu:
+        "Pegar a bolsa":
+            jump bolsa
+        "Não precisa":
+            jump esqueceu
+
+default esqueceu = False
+
+label bolsa:
+
+    "Larissa pega a bolsa e sai"
+
+    jump sair
+
+label esqueceu:
+    $ esqueceu = True
+    "Larissa esquece de pegar a bolsa e sai"
+
+    jump sair
+
+label sair:
+
+if esqueceu:
+    lf "Ah, poxa! preciso voltar!"
+    lf "Esqueci a Bolsa..."
+else:
+    k "Ei, você esta com dinheiro?"
+    lf "Sim, por que?"
+    k "Podemos ir na padaria!"
+    return
